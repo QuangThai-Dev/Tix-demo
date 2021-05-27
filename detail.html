@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GG-Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FONT ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- SLICK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+    <!-- End Slick -->
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tix</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__navbar navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/web-logo.png" alt="" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavBar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="myNavBar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">Lịch Chiếu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cụm rạp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ứng dụng</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="header__right">
+                    <div class="header__account">
+                        <img src="./img/avatar.png" alt="">
+                        <a href="#">Đăng Nhập</a>
+                    </div>
+                    <div class="header__location dropdown">
+
+                        <p type="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="./img/location-header.png" alt=""> Hồ Chí Minh
+                            <span class="fa fa-angle-down"></span>
+                        </p>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                            <a class="dropdown-item" href="#">Hà Nội</a>
+                            <a class="dropdown-item" href="#">Hải Phòng</a>
+                            <a class="dropdown-item" href="#">Đà Nẵng</a>
+                            <a class="dropdown-item" href="#">Biên Hòa</a>
+                            <a class="dropdown-item" href="#">Nha Trang</a>
+                            <a class="dropdown-item" href="#">Bình Dương</a>
+                            <a class="dropdown-item" href="#">Phan Thiết</a>
+                            <a class="dropdown-item" href="#">Hạ Long</a>
+                            <a class="dropdown-item" href="#">Cần Thơ</a>
+                            <a class="dropdown-item" href="#">Vũng Tàu</a>
+                        </div>
+
+                    </div>
+                </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <!-- Detail -->
+    <section class="movie__detail">
+        <div class="movie__detail__content">
+            <div class="movie__blur">
+                <img src="./img/trangti2.jpg" alt="">
+            </div>
+            <div class="movie__gradient">
+
+            </div>
+            <div class=" row movie__content">
+                <div class="col-4">
+                    <div class="movie__img">
+                        <img src="./img/h6.jpg" alt="">
+                        <div class="movie__overlay">
+                            <img src="./img/play-video.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <div class="movie__text">
+                        <span>30.4.2021</span> <br>
+                        <span class="movie__text_P">P</span>
+                        <p class="movie__name">Trạng tý phưu lưu ký</p><br>
+                        <span>100 phút - 0 IMDb - 2D/Digital</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="circle__percent">
+                        <div class="circle__border">
+                        </div>
+                        <span>6.2</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="star__main">
+                        <img src="./img/star1.png" alt="">
+                        <img src="./img/star1.png" alt="">
+                        <img src="./img/star1.png" alt="">
+                        <img src="./img/star1.2.png" alt="">
+                    </div>
+                    <div class="movie__comment">
+                        <span>164 người đánh giá</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section>
+        <div class="movie__detail__text">
+            <div class="movie__main">
+                <ul class="movie__main__content nav  nav-tabs " id="myTab_Detail" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Thông tin</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Đánh giá</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="myTabContent__Detail">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row my-5 mr-0">
+                            <div class="col-6 text-white">
+                                <div class="row ">
+                                    <p class="col-6">Ngày công chiếu: </p>
+                                    <p class="col-6">30.4.2021</p>
+                                </div>
+                                <div class="row ">
+                                    <p class="col-6">Đạo diễn: </p>
+                                    <p class="col-6">Phan Gia Nhật Linh</p>
+                                </div>
+                                <div class="row ">
+                                    <p class="col-6">Diễn viên: </p>
+                                    <p class="col-6">Phan Gia Nhật Linh</p>
+                                </div>
+                                <div class="row ">
+                                    <p class="col-6">Thể loại: </p>
+                                    <p class="col-6">hài hước</p>
+                                </div>
+                                <div class="row ">
+                                    <p class="col-6">Định dạng: </p>
+                                    <p class="col-6">2D/Digital</p>
+                                </div>
+                                <div class="row ">
+                                    <p class="col-6">Quốc gia: </p>
+                                    <p class="col-6">Việt Nam</p>
+                                </div>
+                            </div>
+                            <div class="col-6 text-white">
+                                <div class="row">
+                                    <p>Nội dung</p>
+                                </div>
+                                <div class="row">
+                                    Trạng Tí chuyển thể từ truyện tranh nổi tiếng Thần đồng đất Việt, xoay quanh Tí - cậu bé thông minh, láu lỉnh. Cùng các bạn Sửu, Dần, Mẹo, cậu nhiều lần giúp triều đình thoát khỏi các tình huống nguy hiểm, chống lại ngoại bang
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row my-5">
+                            <div class="col-12">
+                                <span class="img__review">
+                                    <img src="./img/avatar.png" alt="">
+                                </span>
+                                <input type="text" class="input__review" placeholder="Bạn nghĩ gì về phim này?">
+                                <span class="img__review__star">
+                                    <img src="./img/listStar.png" alt="">
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Detail -->
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+    <!-- End Footer -->
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js " integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <!-- ENd JQUERY -->
+</body>
+
+</html>

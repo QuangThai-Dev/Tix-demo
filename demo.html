@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+
+    <style>
+        .button {
+            background: #3299bb;
+            color: white;
+            font-family: Arial;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            box-shadow: 0px 3px 10px black;
+        }
+        
+        .button:active {
+            top: 12px;
+            box-shadow: 0px 2px 10px black;
+        }
+        
+        .button:hover {
+            background: #3999ee;
+        }
+        
+        div.video {
+            width: 420px;
+            height: 315px;
+            display: none;
+            position: absolute;
+        }
+        
+        div.video-wrapper {
+            z-index: 1;
+            background: rgba(0, 0, 0, .5);
+            position: absolute;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+        }
+        
+        .video .close-video {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: -20px;
+            right: 0;
+            background: url(https://image.flaticon.com/icons/svg/149/149690.svg) #fff;
+            border-radius: 50%;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <span class='button'>Watch</span>
+    <div class='video-wrapper'>
+        <div class='video'>
+
+            <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/sx1ROHCmY-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="close-video"></span>
+
+        </div>
+    </div>
+    <script>
+        jQuery.fn.center = function() {
+            this.css("position", "absolute");
+            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+            return this;
+        }
+        $(document).ready(function() {
+
+            $(".video").css({
+                "width": $("#player").css("width"),
+                "height": $("#player").css("height")
+            });
+
+            $(".button").click(function() {
+                $(".video-wrapper").fadeIn('fast', function() {
+                    $(".video").fadeIn();
+                    $(".video").center();
+                });
+
+            });
+
+            $(".video-wrapper").click(function(e) {
+                if ($(e.target).is(".video-wrapper")) {
+                    $(".video").fadeOut(function() {
+                        $(".video-wrapper").fadeOut(function() {
+                            $(".video, .video-wrapper").css({
+                                'display': 'none'
+                            });
+                            var src = $("#player").attr("src");
+                            $("#player").attr("src", "");
+                            $("#player").attr("src", src);
+                        });
+                    });
+                }
+            });
+
+            $(document).keyup(function(e) {
+                var isShown = $(".video-wrapper").css("display");
+
+                if (isShown !== "none" && e.which == 27) {
+                    $(".video-wrapper").click();
+                }
+
+            });
+            var close_btn = $('.close-video');
+            $(document).on('click', function(e) {
+                if ($(iframe).is(e.target) || $(close_btn).is(e.target)) {
+                    $(iframe).removeClass('show-video');
+                    $(iframe_video).attr('src', '');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+
+</html>
+<script>
+    $(document).ready(function() {
+        $('.vid-slider .vid').on('click', function() {
+            // get required DOM Elements
+            var iframe_src = $(this).children('iframe').attr('src'),
+                iframe = $('.video-popup'),
+                iframe_video = $('.video-popup iframe'),
+                close_btn = $('.close-video');
+            iframe_src = iframe_src + '?autoplay=1&rel=0'; // for autoplaying the popup video
+
+            // change the video source with the clicked one
+            $(iframe_video).attr('src', iframe_src);
+            $(iframe).fadeIn().addClass('show-video');
+
+            // remove the video overlay when clicking outside the video
+            $(document).on('click', function(e) {
+                if ($(iframe).is(e.target) || $(close_btn).is(e.target)) {
+                    $(iframe).removeClass('show-video');
+                    $(iframe_video).attr('src', '');
+                }
+            });
+
+        });
+
+    });
+</script>
+<div class="dropdown select__film col-4">
+    <a class=" dropdown-toggle" type="button" id="dropdownMovie" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Phim <span class="fa fa-angle-down"></span>
+      </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMovie">
+        <a class="dropdown-item" href="#">Trạng Tý Phưu Lưu Ký</a>
+        <a class="dropdown-item" href="#">Lật Mặt: 48h</a>
+        <a class="dropdown-item" href="#">Thiên Thần Hộ Mệnh - The Guardian(C18)</a>
+        <a class="dropdown-item" href="#">Detective Conan: Scarlet Bullet - Thám Tử Lừng Danh Conan: Viên Đạn Đỏ - C13</a>
+    </div>
+</div>
+<div class="dropdown select__cinema col-2">
+    <a class=" dropdown-toggle" type="button" id="dropdownCinema" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Rạp <span class="fa fa-angle-down"></span>
+      </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownCinema">
+
+    </div>
+</div>
+.select__film a, .select__cinema a, .select__date a { text-decoration: none; color: #000; } .select__film, .select__cinema { border-right: 1px solid rgba(206, 206, 206, 0.904); } .select__film .fa.fa-angle-down { padding-left: 147px; color: #9b9b9b; }
+.select__cinema .fa.fa-angle-down { padding-left: 0px; color: #9b9b9b; } .select__date .fa.fa-angle-down { padding-left: 140px; color: #9b9b9b; }
